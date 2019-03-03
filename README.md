@@ -18,8 +18,10 @@ This creates a directory where your database and other files will be located.
      ii)   Also change 
              #unix_socket_directories = '/var/run/postgresql'
          to
+              
               unix_socket_directories = '/xxx/postgresql'
-        where xxx is the full path of your home directory (e.g. /users/ug16/akash/postgresql if your login is akash)
+        where xxx is the full path of your home directory (e.g. /home/anshua/postgresql if your login is anshua)
+        
      iii) Now start an instance of postgresql by using either of these methods:
          a) Either run:
                 /usr/lib/postgresql/10/bin/pg_ctl -D ~/postgresql/dbis -l logfile start
