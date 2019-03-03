@@ -3,6 +3,7 @@
 
 Server and Database:-
 1) Open a terminal, and execute
+
     i)   cd ~
     ii)  mkdir postgresql
     iii) cd postgresql
