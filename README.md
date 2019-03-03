@@ -50,6 +50,8 @@ This creates a directory where your database and other files will be located.
 
 
 steps to create app.
+
+
 Backend:-
 0) Install tomcat(latest version)
 1) open Eclipse
