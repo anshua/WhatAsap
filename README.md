@@ -10,20 +10,18 @@ This creates a directory where your database and other files will be located.
 2)Now execute
     /usr/lib/postgresql/10/bin/initdb -D dbis
     
-    (If you have an older version of PostgreSQL, your path may be slightly different, such as 9.5 or 9.4 instead of 9.6)
-    and then edit   dbis/postgresql.conf   and
+   (If you have an older version of PostgreSQL, your path may be slightly different, such as 9.5 or 9.4 instead of 9.6)
+   and then edit   dbis/postgresql.conf   and
     
-    i)  change
+   i)  change
              #port = 5432 (or any port you want)
      ii)   Also change 
              #unix_socket_directories = '/var/run/postgresql'
          to
-              
-              unix_socket_directories = '/xxx/postgresql'
+             #unix_socket_directories = '/xxx/postgresql'
         where xxx is the full path of your home directory (e.g. /home/anshua/postgresql if your login is anshua)
-        
-     iii) Now start an instance of postgresql by using either of these methods:
-         a) Either run:
+    iii) Now start an instance of postgresql by using either of these methods:
+        a) Either run:
                 /usr/lib/postgresql/10/bin/pg_ctl -D ~/postgresql/dbis -l logfile start
             and check the status by looking at the file logfile to make sure it has started
             (BEFORE YOU LOG OUT:  run
@@ -41,7 +39,6 @@ This creates a directory where your database and other files will be located.
         Explore a few commands using \? and \h.  Don't spend too much time on this in the lab, you can explore more offline.
         Type in any SQL command and hit enter to execute the command. You need to end SQL commands with a semi colon.  See below for some sample SQL commands.
         Exit the shell using \q
-        
      2) Run some basic SQL commands such as the following and see what happens
         create table test (i int, name varchar(20));
         insert into test values (5, 'Ram');
