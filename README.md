@@ -50,19 +50,33 @@ Server and Database:-
             (BEFORE YOU LOG OUT kill the process to shut down postgresql)
             
 3)Once postgres is started, connect to it
+
     psql -h localhost -p xyz0 -d postgres
+    
   where xyz0 is the port number you defined earlier
+  
     1)  Use the help menu to figure out basic psql commands, such as \d 
+    
         See what tables are there by typing \d
+        
         Explore a few commands using \? and \h.  Don't spend too much time on this in the lab, you can explore more offline.
+        
         Type in any SQL command and hit enter to execute the command. You need to end SQL commands with a semi colon.  See below for some sample SQL commands.
+        
         Exit the shell using \q
+        
      2) Run some basic SQL commands such as the following and see what happens
+     
         create table test (i int, name varchar(20));
+        
         insert into test values (5, 'Ram');
+        
         insert into test values (10, 'Sita');
+        
         select * from test;
+        
         drop table test;
+        
 
 
 steps to create app.
@@ -76,27 +90,45 @@ Backend:-
 3) right click on the project and select *Build Path -> Configure Build Path -> Java Build Path -> Library*
     add these jar files as Add External Jars
      i) el-api.jar
+     
     ii) jackson-annotations-2.9.0.jar
+    
    iii) jackson-core-2.9.6.jar
+   
     iv) jackson-databind-2.9.6.jar
+    
      v) jsoup-1.11.3.jar
+     
     vi) jsp-api.jar
+    
    vii) postgresql-42.2.4.jar
+   
   viii) servlet-api.jar
+  
   Apply and close
   
 4) right click on the project and select *Run Configurations -> Apache Tomcat -> Tomcat v9.0 server at localhost -> classpath
    add postgresql-42.2.4.jar to bootstrap entries
    and add these files to User Entries
+   
    i) bootstrap.jar     /opt/tomcat9/bin/
+   
   ii) tomcat-juli.jar   /opt/tomcat9/bin/
+  
  iii) tools.jar         /usr/lib/jvm/java-8-oracle/lib/
+ 
   iv) jackson-annotations-2.9.0.jar
+  
    v) jackson-core-2.9.6.jar
+   
   vi) jackson-databind-2.9.6.jar
+  
  vii) jsoup-1.11.3.jar
+ 
 viii) postgresql-42.2.4.jar
+
   apply and run
+  
 
 5) copy all files of src folder to your src folder.
 
