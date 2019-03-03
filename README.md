@@ -9,13 +9,12 @@ Server and Database:-
 This creates a directory where your database and other files will be located.
 2)Now execute
     /usr/lib/postgresql/10/bin/initdb -D dbis
+    
     (If you have an older version of PostgreSQL, your path may be slightly different, such as 9.5 or 9.4 instead of 9.6)
     and then edit   dbis/postgresql.conf   and
+    
     i)  change
-             #port = 5432
-        to
-             port = xyz0
-        where  xyz is 500 + the last 3 digits of your roll number.  (This is just a way to avoid clashes on ports with other students who may be running postgresql servers on the same machine; if you don't do this, your copy of PostgreSQL may try to use an already in use port and won't start.)
+             #port = 5432 (or any port you want)
      ii)   Also change 
              #unix_socket_directories = '/var/run/postgresql'
          to
@@ -26,7 +25,7 @@ This creates a directory where your database and other files will be located.
                 /usr/lib/postgresql/10/bin/pg_ctl -D ~/postgresql/dbis -l logfile start
             and check the status by looking at the file logfile to make sure it has started
             (BEFORE YOU LOG OUT:  run
-                  /usr/lib/postgresql/10/bin/pg_ctl -D ~/postgresql/dbis stop
+                /usr/lib/postgresql/10/bin/pg_ctl -D ~/postgresql/dbis stop   
             )
          b) OR  run
                /usr/lib/postgresql/10/bin/postmaster -D ~/postgresql/dbis  &
