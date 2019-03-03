@@ -12,6 +12,7 @@ Server and Database:-
     
     This creates a directory where your database and other files will be located.
 2)  Now execute
+
     /usr/lib/postgresql/10/bin/initdb -D dbis
     
    (If you have an older version of PostgreSQL, your path may be slightly different, such as 9.5 or 9.4 instead of 9.6)
@@ -19,22 +20,35 @@ Server and Database:-
     
    i)  change
              #port = 5432 (or any port you want)
+             
      ii)   Also change 
+     
              #unix_socket_directories = '/var/run/postgresql'
          to
              #unix_socket_directories = '/xxx/postgresql'
+             
         where xxx is the full path of your home directory (e.g. /home/anshua/postgresql if your login is anshua)
     iii) Now start an instance of postgresql by using either of these methods:
         a) Either run:
+        
                 /usr/lib/postgresql/10/bin/pg_ctl -D ~/postgresql/dbis -l logfile start
+                
             and check the status by looking at the file logfile to make sure it has started
+            
             (BEFORE YOU LOG OUT:  run
+            
                 /usr/lib/postgresql/10/bin/pg_ctl -D ~/postgresql/dbis stop   
+                
             )
+            
          b) OR  run
+         
                /usr/lib/postgresql/10/bin/postmaster -D ~/postgresql/dbis  &
+               
             and make sure the messages show that postgresql has started properly;
+            
             (BEFORE YOU LOG OUT kill the process to shut down postgresql)
+            
 3)Once postgres is started, connect to it
     psql -h localhost -p xyz0 -d postgres
   where xyz0 is the port number you defined earlier
