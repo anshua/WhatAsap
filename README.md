@@ -5,8 +5,11 @@ Server and Database:-
 1) Open a terminal, and execute
 
     i)   cd ~
+    
     ii)  mkdir postgresql
+    
     iii) cd postgresql
+    
     This creates a directory where your database and other files will be located.
 2)  Now execute
     /usr/lib/postgresql/10/bin/initdb -D dbis
