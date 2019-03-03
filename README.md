@@ -27,7 +27,8 @@ Server and Database:-
          to
              #unix_socket_directories = '/xxx/postgresql'
              
-        where xxx is the full path of your home directory (e.g. /home/anshua/postgresql if your login is anshua)
+        where xxx is the full path of your home directory 
+        (e.g. /home/anshua/postgresql if your login is anshua)
     iii) Now start an instance of postgresql by using either of these methods:
         a) Either run:
         
@@ -59,9 +60,10 @@ Server and Database:-
     
         See what tables are there by typing \d
         
-        Explore a few commands using \? and \h.  Don't spend too much time on this in the lab, you can explore more offline.
+        Explore a few commands using \? and \h. 
         
-        Type in any SQL command and hit enter to execute the command. You need to end SQL commands with a semi colon.  See below for some sample SQL commands.
+        Type in any SQL command and hit enter to execute the command. 
+        You need to end SQL commands with a semi colon.  See below for some sample SQL commands.
         
         Exit the shell using \q
         
@@ -89,6 +91,7 @@ Backend:-
 2) create Dynamic web Project
 3) right click on the project and select *Build Path -> Configure Build Path -> Java Build Path -> Library*
     add these jar files as Add External Jars
+    
      i) el-api.jar
      
     ii) jackson-annotations-2.9.0.jar
@@ -101,9 +104,9 @@ Backend:-
      
     vi) jsp-api.jar
     
-   vii) postgresql-42.2.4.jar
+    vii) postgresql-42.2.4.jar
    
-  viii) servlet-api.jar
+    viii) servlet-api.jar
   
   Apply and close
   
@@ -111,21 +114,21 @@ Backend:-
    add postgresql-42.2.4.jar to bootstrap entries
    and add these files to User Entries
    
-   i) bootstrap.jar     /opt/tomcat9/bin/
+    i) bootstrap.jar     /opt/tomcat9/bin/
    
-  ii) tomcat-juli.jar   /opt/tomcat9/bin/
+    ii) tomcat-juli.jar   /opt/tomcat9/bin/
   
- iii) tools.jar         /usr/lib/jvm/java-8-oracle/lib/
+    iii) tools.jar         /usr/lib/jvm/java-8-oracle/lib/
  
-  iv) jackson-annotations-2.9.0.jar
+    iv) jackson-annotations-2.9.0.jar
   
-   v) jackson-core-2.9.6.jar
+    v) jackson-core-2.9.6.jar
    
-  vi) jackson-databind-2.9.6.jar
+    vi) jackson-databind-2.9.6.jar
   
- vii) jsoup-1.11.3.jar
+    vii) jsoup-1.11.3.jar
  
-viii) postgresql-42.2.4.jar
+    viii) postgresql-42.2.4.jar
 
   apply and run
   
